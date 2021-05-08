@@ -1,4 +1,4 @@
-## Screenshot
+## Screenshots
 
 ![Dark](https://fetloader.xyz/dark.png) ![Light](https://fetloader.xyz/light.png)
 
