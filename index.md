@@ -1,6 +1,6 @@
 ## Screenshot
 
-![Screenshot](https://fetloader.xyz/dark.png
+![Dark](https://fetloader.xyz/dark.png) ![Light](https://fetloader.xyz/light.png)
 
 ## Features
 - Web UI
