@@ -1,10 +1,13 @@
 title: FET Loader
 description: A simple cheats loader written in AHK
+owner: FET Loader Team
+owner_url: https://github.com/fetloader
 
 theme: jekyll-theme-cayman
 
 show_links: true
 
+view_url: https://github.com/fetloader
 release_url: https://github.com/fetloader/fetloader/releases/latest
 tg_channel: https://t.me/ayeloader
 vk_group: https://vk.com/ayeloader
