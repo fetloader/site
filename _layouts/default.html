@@ -1,29 +1,30 @@
 <!DOCTYPE html>
 <html lang="{{ site.lang | default: "en-US" }}">
   <head>
+
+    {% if site.google_analytics %}
+      <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', '{{ site.google_analytics }}');
+      </script>
+    {% endif %}
     <meta charset="UTF-8">
+
+{% seo %}
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="keywords" content="fet loader, aye loader, ауе, aye, yougame, csgo, читы, кряк вантапа, ahk, opensource, loader, лондер, лондэр, скачат, скачать, скачат лондэр, фет, фэт">
-    <meta name="description" content="A simple cheats loader written in AHK"> 
     <meta name="theme-color" content="#157878">
-    <meta name="author" content="clownless: https://clownless.xyz">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Chivo:400,700">
-    <title>FET Loader | A simple cheats loader written in AHK.</title>
+    <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
   </head>
   <body>
-    <header class="page-header" role="banner">
-      <h1 class="project-name">FET Loader</h1>
-      <h2 class="project-tagline">A simple CS:GO cheats loader written in AHK.</h2>
-        <a href="https://github.com/fetloader/fetloader/releases/latest" class="btn">Download latest release</a>
-        <a href="https://github.com/fetloader" class="btn">View on Github</a>
-        <a href="https://docs.fetloader.xyz" class="btn">View documentation</a>
-        <a href="https://t.me/ayeloader" class="btn">TG channel</a>
-        <a href="https://vk.com/ayeloader" class="btn">VK group</a>
-        <a href="https://discord.gg/bSgZxY3rQm" class="btn">Discord server</a>
-        <a href="https://t.me/m4x3r228/5" class="btn">Donate</a>
-    </header>
-
+    <a id="skip-to-content" href="#content">Skip to the content.</a>
+    
+    
     <style>
     body {
     font-family: Chivo, Helvetica, Arial, sans-serif;
@@ -42,3 +43,31 @@
       background: -webkit-linear-gradient(to left, #5C258D , #4389A2); /* Chrome 10-25, Safari 5.1-6 */
       background: linear-gradient(120deg, #5C258D , #4389A2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
       }</style>
+
+    <header class="page-header" role="banner">
+      <h1 class="project-name">{{ page.title | default: site.title | default: site.github.repository_name }}</h1>
+      <h2 class="project-tagline">{{ page.description | default: site.description | default: site.github.project_tagline }}</h2>
+      {% if site.github.is_project_page %}
+        <a href="{{ site.github.repository_url }}" class="btn">View on GitHub</a>
+      {% endif %}
+      {% if site.show_downloads %}
+        <a href="{{ site.release_url }}" class="btn">Download latest release</a>
+        <a href="{{ site.tg_channel }}" class="btn">TG Channel</a>
+        <a href="{{ site.vk_group }}" class="btn">VK Group</a>
+        <a href="{{ site.ds_server }}" class="btn">Discord server</a>
+        <a href="{{ site.donate }}" class="btn">Donate</a>
+
+      {% endif %}
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      {{ content }}
+
+      <footer class="site-footer">
+        {% if site.github.is_project_page %}
+          <span class="site-footer-owner"><a href="{{ site.github.repository_url }}">{{ site.github.repository_name }}</a> is maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a>.</span>
+        {% endif %}
+      </footer>
+    </main>
+  </body>
+</html>
