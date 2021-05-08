@@ -46,8 +46,8 @@
       }</style>
 
     <header class="page-header" role="banner">
-      <h1 class="project-name">{{ site.title }}</h1>
-      <h2 class="project-tagline">{{ site.description }}</h2>
+      <h1 class="project-name">{{ page.title | default: site.title | default: site.github.repository_name }}</h1>
+      <h2 class="project-tagline">{{ page.description | default: site.description | default: site.github.project_tagline }}</h2>
       {% if site.show_links %}
         <a href="{{ site.view_url }}" class="btn">View on GitHub</a>
         <a href="{{ site.release_url }}" class="btn">Download latest release</a>
