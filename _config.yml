@@ -1,6 +1,7 @@
 title: FET Loader
 theme: jekyll-theme-cayman
 
+show_links: true
 
 release_url: https://github.com/fetloader/fetloader/releases/latest
 tg_channel: https://t.me/ayeloader
