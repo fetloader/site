@@ -4,7 +4,7 @@ title: FET Loader
 
 ## Screenshots
 
-![Dark](https://fetloader.xyz/dark.png) ![Light](https://fetloader.xyz/light.png)
+![Dark](https://fetloader.ml/dark.png) ![Light](https://fetloader.ml/light.png)
 
 ## Features
 - Web UI
