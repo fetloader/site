@@ -2,6 +2,8 @@
 title: FET Loader
 ---
 
+## FET Loader is discontinued. See more: https://t.me/ayeloader/1013
+
 ## Screenshots
 
 ![Dark](https://fetloader.ml/dark.png) ![Light](https://fetloader.ml/light.png)
